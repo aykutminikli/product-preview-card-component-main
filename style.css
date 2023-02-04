@@ -23,4 +23,74 @@
 
 body{
     font-family: "Montserrat";
+    font-size: 14px;
+    display: grid;
+    place-content: center;
 }
+
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 1.2em;
+    max-width: 600px;
+}
+
+.card__body{
+    padding: 1.7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product__cat{
+    font-size: 0.9em;
+    letter-spacing: 0.5em;
+}
+
+.product__title, .dis__price{
+    font-size: 2.3em;
+    line-height: 1em;
+    margin: 0.4em 0 ;
+    font-family: "Fraunces";
+}
+
+.product__desc{
+    line-height: 1.7em;
+}
+
+.product__price{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5em;
+    margin: 0.8em 0 0.5em 0;
+}
+
+.og__price{
+    text-decoration: line-through;
+}
+
+.btn__add{
+    border: none;
+    border-radius: 0.5em;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.7em;
+}
+
+.btn__add:hover{
+    background-color: hsl(156, 36%, 20%);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card__body{
+        padding: 2.5em;
+    }
+  }
